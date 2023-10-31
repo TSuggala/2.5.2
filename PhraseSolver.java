@@ -27,11 +27,6 @@ public class PhraseSolver {
 
   /* your code here - accessor(s) */
 
-  public String getPlayerName() {
-    /* */
-    return "yes";
-  }
-
   /* your code here - mutator(s) */
 
   public void play() {
