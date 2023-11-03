@@ -3,6 +3,8 @@
  * Activity 2.5.2
  *
  * A Board class the PhraseSolverGame
+ * Developed By: Thaman Suggala and Manning Wu
+ *
  */
 import java.util.Scanner;
 import java.io.File;
@@ -22,14 +24,19 @@ public class Board {
     phrase = loadPhrase();
     this.setLetterValue();
 
-    System.out.println("Phrase: " + phrase); // temp test code
+    // System.out.println("Phrase: " + phrase); // temp test code
   }
 
   /* your code here - accessor(s) */
 
   /* added with 2.5.4 */
   public int getCurrentLetterValue() {
+    setLetterValue();
     return currentLetterValue;
+  }
+
+  public String getUnsolvedPhrase() {
+    return solvedPhrase;
   }
 
   public String getPhrase() {
@@ -95,15 +102,15 @@ public class Board {
   /* added with 2.5.3 */
   /*
    * Allows player to guess a letter
-   * 
+   *
    * Precondition:
    * Player must have a guess that is a 1 character string
-   * 
+   *
    * Postcondition:
    * Code records the state of whether the player guessed a letter or not
    * Changes the hidden phrase to its updated state, changing _ to their
    * respective letters if that letter was guessed
-   * 
+   *
    */
 
   public boolean guessLetter(String guess) {
