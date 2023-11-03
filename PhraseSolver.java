@@ -42,8 +42,8 @@ public class PhraseSolver {
   /* your code here - mutator(s) */
 
   /* added with 2.5.5 */
-  public int getPoints() {
-    return points += board.getCurrentLetterValue();
+  public void getPoints() {
+    points += board.getCurrentLetterValue();
   }
 
   public void play() {
